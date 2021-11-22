@@ -1,5 +1,6 @@
 package com.sehon.enhancemod;
 
+import com.sehon.enhancemod.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -29,6 +30,9 @@ public class EnhanceMod
     public EnhanceMod() {
         // Register the setup method for modloading
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(eventBus);
+
         eventBus.addListener(this::setup);
 
 
@@ -43,3 +47,10 @@ public class EnhanceMod
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 }
+
+// NOTE:
+// To create an item, make sure you ...
+// Added the RegistryObject for the item
+// Added the translation in en_us.json
+// Added the .json file in models/item
+// and added the texture in textures/item.
