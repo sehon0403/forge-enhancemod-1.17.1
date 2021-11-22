@@ -1,3 +1,6 @@
 {
-  "item.enhancemod.titanium_ingot": "Titanium Ingot"
+  "item.enhancemod.titanium_ingot": "Titanium Ingot",
+  "item.enhancemod.titanium_shard": "Titanium Shard",
+
+  "block.enhancemod.titanium_slab": "Titanium Slab"
 }

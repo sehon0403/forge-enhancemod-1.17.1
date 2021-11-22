@@ -1,5 +1,6 @@
 package com.sehon.enhancemod;
 
+import com.sehon.enhancemod.block.ModBlocks;
 import com.sehon.enhancemod.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -32,6 +33,7 @@ public class EnhanceMod
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
 
         eventBus.addListener(this::setup);
 
